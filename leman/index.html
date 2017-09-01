@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>leman</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Merriweather Sans', sans-serif;
+      color: rgba(240, 240, 240, 0.85);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .webgl {
+      background: linear-gradient(to bottom, #A7A7A7 0%, #3C3C3C 100%);    
+    }
+    .label {
+      padding: 2px;      
+      position: absolute;
+      pointer-events: none;
+    }
+    h1,
+    .credit {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 1em;
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+    a, a:hover, a:visited { color: #EB0000 }
+  </style>
+</head>
+<body>
+  <div id="webgl" class="webgl"></div>
+  <div class="credit">Made with 🇨🇭 by <a href="https://github.com/Yago">Yago</a> | Powered by <a href="https://www.qgis.org">QGIS</a>, <a href="https://github.com/minorua/Qgis2threejs">Qgis2threejs</a> and <a href="https://threejs.org/">three.js</a></div>
+  <script src="./threejs/three.min.js"></script>
+  <script src="./Qgis2threejs.js"></script>
+  <script src="./threejs/OrbitControls.js"></script>
+  <script>
+    var option = Q3D.Options;
+    option.side.color = 0x363626;
+    option.side.bottomZ = 1;
+  </script>
+  <script src="./leman.js"></script>
+  <script>
+    var container = document.getElementById("webgl");
+    // initialize application
+    var app = Q3D.application;
+    app.init(container);
+    // load the project
+    app.loadProject(project);
+    app.addEventListeners();
+    app.start();
+  </script>
+</body>
+</html>

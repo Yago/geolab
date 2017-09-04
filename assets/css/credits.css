@@ -1,0 +1,24 @@
+.credit {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  padding: 0.6em 1.5em;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  background: #fff;
+  text-shadow: none;
+  color: #000;
+}
+
+a {
+  color: #42710F;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #7ED321;
+}

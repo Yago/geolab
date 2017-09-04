@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.map {
+  background: #202020;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.leaflet-bar a {
+  background: #7ED321;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.leaflet-bar a:hover {
+  background: #42710F !important;
+  color: #fff !important;
+}
+
+.leaflet-bar a.leaflet-disabled {
+  background: #8E8E8E !important;
+  color: #fff !important;
+}
+
+.leaflet-control-attribution { display: none !important; }

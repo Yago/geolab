@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>#1 - Swiss relief - Geolab</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/map.css">
+  <link rel="stylesheet" href="../../assets/css/credits.css">
+
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body class="map posts home" id="map-page">
+  <div id="map" class="map"></div>
+  <div class="credit credit-bg">Made with 🌖  by <a href="https://github.com/Yago">Yago</a> | Powered by <a href="http://leafletjs.com/">Leaflet</a> and <a href="https://tilemill-project.github.io/tilemill/">TileMill</a></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+  <script>
+    var ownMap = L.tileLayer('http://geodem.ch/tiles/night_map/{z}/{x}/{y}.png', {
+      maxZoom: 7, 
+      minZoom: 2, 
+      detectRetina: true
+    });
+    
+    var map = L.map(document.getElementById('map'), {
+      center: [46.607941, 8.041077],
+      zoom: 3,
+      zoomControl: false,
+      layers: [ownMap]
+    });
+
+    var zoom = L.control.zoom({
+      position: 'topright'
+    }).addTo(map);
+
+    if($(window).width() < 767){
+      var zoom = L.control.zoom({
+        position: 'bottomright'
+      }).addTo(map);
+    }
+  </script>
+</body>
+</html>

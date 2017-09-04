@@ -2,9 +2,9 @@
 
 ## Welcome on Geolab's repo !
 
-#[Visit Geolab](http:geolab.io)
+# [:point_right: Visit Geolab](http:geolab.io)
 
-#### Contributions
+### Contributions
 
 Feel free to submit your work with a **pull-request** regarding to the following structure :
 
@@ -16,3 +16,5 @@ Feel free to submit your work with a **pull-request** regarding to the following
     └── YOUR-LABS-NAME
         └── index.html
 ```
+
+It can be any technology, but on client side because of `gh-pages` limitations.
